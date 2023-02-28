@@ -1,0 +1,38 @@
+/************ Footer Css ************/
+.footer {
+    padding: 0 0 50px 0;
+    /* background-image: url('./assets/img/footer-bg.png'); */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.footer img {
+    width: 26%;
+}
+.footer p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #B8B8B8;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+.footer a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: 60px;
+    margin-left: 10%;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.footer a svg {
+    font-size: 25px;
+    margin-left: 10px;
+    transition: 0.3s ease-in-out;
+    line-height: 1;
+}
+.footer a:hover svg {
+    margin-left: 25px;
+}
