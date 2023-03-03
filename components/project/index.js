@@ -60,7 +60,7 @@ export default function Project() {
                 <TrackVisibility>
                     {({ isVisible }) =>
                     <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                        <h2>Projects</h2>
+                        <h2>My Experiences</h2>
                         <p>Implementing the endless ideas I imagined with the technology I learned is interesting. I will always be a front-end developer who is fearless of new attempts. From understanding your requirements, designing a blueprint and delivering the final product, I do everything that falls in between these lines.</p>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">

@@ -50,7 +50,7 @@ export default function Banner() {
                         <button onClick={() => console.log("connect Clicked")}>Let's connect <ArrowRightCircle size={25} /></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src='/images/webdev.svg' alt="Headder image" />
+                        <img src='/images/home.png' alt="Headder image" />
                     </Col>
                 </Row>
             </Container>

@@ -4,7 +4,7 @@ export default function AboutMe() {
     return (
         <div className="proj-aboutCont">
             <div className="proj-img">
-                <img src='/images/webdevel.png' />
+                <img src='/images/memoji.png' />
             </div>
             <div className="proj-abtTx">
                 <h4>Hi, I'm Sarah</h4>

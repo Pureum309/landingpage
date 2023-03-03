@@ -26,7 +26,7 @@ export default function NavBar() {
         <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <h1>PR's Portfolio</h1>
+            <h1 className="navbar-heading">PR's Portfolio</h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@ export default function NavBar() {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                    <a href=""><img src='/images/github.png' alt="github" /></a>
+                    <a href="https://github.com/Pureum309"><img src='/images/github.png' alt="github" /></a>
               </div>
             </span>
           </Navbar.Collapse>
