@@ -204,6 +204,7 @@
     width: 300px;
     margin-right: 40px;
     border-radius: 50%;
+    background-color: white;
 }
 .proj-abtTx{
     width: 500px;
@@ -221,11 +222,127 @@
     letter-spacing: 0.8px;
 }
 
+/************ Work Cards Css ************/
+.proj-workimgbx {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    width: 100%;
+    height: 150px;
+
+    background-color: #FFFFFC;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.workCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+
+    padding: 0 20px;
+}
+.workText-line {
+    width: 40px;
+    height: 2px;
+
+    background-color: black;
+}
+.workText {
+    /* padding-left: 5px; */
+}
+.workCont p {
+    text-align: left;
+    font-size: 14px;
+    width: 100%;
+    line-height: 0px;
+
+    color: black;
+}
+.proj-workimgbx img {
+    width: 30%;
+    /* height: 100%; */
+    object-fit: contain;
+}
+.proj-workimgbx::before {
+    content: "";
+    background: linear-gradient(90.21deg, #DA627D -5.91%, #182383 111.58%);
+    opacity: 0.85;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    transition: 0.4s ease-in-out;
+}
+.proj-workimgbx:hover::before {
+    height: 100%;
+}
+.proj-worktxtx {
+    position: absolute;
+    text-align: center;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    width: 100%;
+}
+.proj-workimgbx:hover .proj-worktxtx {
+    top: 50%;
+    opacity: 1;
+}
+.proj-worktxtx h4 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1.1em;
+    text-align: left;
+    margin: 20px;
+
+    color: white;
+}
+.background-image-right {
+    top: 20%;
+    position: absolute;
+    bottom: 0;
+    width: 35%;
+    right: 0;
+    z-index: -4;
+}
+
+
 @media screen and (max-width: 767px) {
+    .proj-cont {
+        margin-top: 0px;
+        width: 350px;
+        margin-bottom: 20px;
+    }
+    /* about me */
     .proj-aboutCont {
         flex-direction: column;
     }
+    .proj-abtTx h4 {
+        font-size: 30px;
+    }
+    .proj-abtTx{
+        width: 300px;
+    }
+    .proj-img img {
+        width: 200px;
+        margin-right: 0px;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-
+    .proj-cont {
+        margin-top: 10px;
+        width: 220px;
+        padding: 10px;
+    }
+    .proj-cont img {
+        width: 150px;
+    }
 }

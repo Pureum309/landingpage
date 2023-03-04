@@ -5,31 +5,39 @@ import ProjectCard from '@/components/project/projectCard';
 import TrackVisibility from "react-on-screen";
 import DoCard from "./doCard";
 import AboutMe from "./aboutMe";
+import WorkCard from "./work";
 
 export default function Project() {
     const projects = [
         {
             title: "Ohana",
             description: "Ohana is an app that creates a network for people with accessibility issues so that they can reach out to multiple individuals who can help them achieve their daily tasks and errands.",
-            imgUrl: "/images/ohana.png"
+            imgUrl: "/images/ohana.png",
+            gitLink: "https://github.com/Pureum309/OHANA"
             
         },
         {
             title: "Oceeco",
             description: "The Oceeco is an informative form-based app that provides easy-to-understand and detailed knowledge about common plastic found in the ocean and their effect on the marine ecosystem.",
-            imgUrl: "/images/oceeco.png"
+            imgUrl: "/images/oceeco.png",
+            gitLink: "https://github.com/Pureum309/oceeco",
+            verLink: "https://oceeco.vercel.app/"
             
         },
         {
             title: "Clime7",
             description: "The Clime7 gives a 6-day forecast weather website that displays weather information for the next six days. It includes the current temperature, date and month, and a brief description of the weather conditions for each day.",
-            imgUrl: "/images/clime7.png"
+            imgUrl: "/images/clime7.png",
+            gitLink: "https://github.com/Pureum309/clime7",
+            verLink: "https://clime7.vercel.app/"
             
         },
         {
             title: "Quickfit",
             description: "Quickfit is an online platform designed to assist people following specific diets, including keto, vegan, or paleo, to navigate fast food restaurant menus easily.",
-            imgUrl: "/images/quickfit.png"
+            imgUrl: "/images/quickfit.png",
+            gitLink: "https://github.com/Pureum309/quickfit",
+            verLink: "https://quickfit.vercel.app/"
             
         },
     ];
@@ -50,7 +58,53 @@ export default function Project() {
             description: "An effective UI/UX is what captures attention and spreads a clear message. I make sure the design is innovative and neat with all of this.",
             imgUrl: "/images/uiux.png"
         },
+    ];
+
+    const works = [
+        {
+            title: "BCIT",
+            jobDesc: "Digital Design and Development",
+            date: "Sep 2021 - Current",
+            titleDesc: "Building a solid foundation in designing, developing, and creating interactive, dynamic, immersive social and online applications across various digital media platforms.",
+            imgUrl: "/logos/bcit.png"
+        },
+        {
+            title: "Natural Life Nutrition",
+            jobDesc: "Office Admin",
+            date: "Mar 2017 - July 2021",
+            titleDesc: "Natural Life Nutrition Inc. is a nutraceutical manufacturer and supplier located in Barnaby. Establishing effective relationships with a broad range of contacts. Keeping up-to-date with the lasted pharmaceutical industries",
+            imgUrl: "/logos/nln.png"
+        },
+        {
+            title: "e:dm consulting",
+            jobDesc: "Office Admin",
+            date: "Oct 2015 -  Feb 2017",
+            titleDesc: "Edm education consulting gives direction and guidance to students in planning to enter universities or language schools in Canada. Identify curriculum issues in language schools or college. Keep update the current curriculum",
+            imgUrl: "/logos/edm.png"
+        },
+        {
+            title: "Shaw Communications",
+            jobDesc: "CSE",
+            date: "Mar -  Oct 2015",
+            titleDesc: "Shaw Communications Inc. is a Canadian telecommunications company which provides telephone, Internet, television, and mobile services. Manage day-to-day tasks efficiently with a primary focus on building client rapport",
+            imgUrl: "/logos/shaw.png"
+        },
+        {
+            title: "Starbucks",
+            jobDesc: "Barista",
+            date: "July 2014 - March 2015",
+            titleDesc: "Connect and create moments that make a difference and work together to create a welcoming store environment",
+            imgUrl: "/logos/starbucks.png"
+        },
+        {
+            title: "Acadia University",
+            jobDesc: "Business Admin",
+            date: "Gradiated May 2014",
+            titleDesc: `Learned a broad array of management-related subjects like finance, sales and marketing, human resource management and so on.`,
+            imgUrl: "/logos/acadia.jpeg"
+        },
     ]
+
 
     return (
         <section className="project" id="project">
@@ -65,24 +119,24 @@ export default function Project() {
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                             <Nav.Item>
-                                <Nav.Link eventKey="first">Portfolio</Nav.Link>
+                                <Nav.Link eventKey="first">About Me</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="second">What I do</Nav.Link>
+                                <Nav.Link eventKey="second">What I Do</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="third">About me</Nav.Link>
+                                <Nav.Link eventKey="third">Portfolio</Nav.Link>
                             </Nav.Item>
                             </Nav>
                             <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                             <Tab.Pane eventKey="first">
-                                <Row>
-                                {
-                                    projects.map((project, index) => {
+                                <AboutMe />
+                                <Row> 
+                                { works.map((w, index) => {
                                         return (
-                                            <ProjectCard
+                                            <WorkCard 
                                                 key={index}
-                                                {...project}
+                                                {...w}
                                             />
                                         )
                                     })
@@ -101,10 +155,21 @@ export default function Project() {
                                             )
                                         })
                                     }
-                                    </Row>
+                                </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
-                                <AboutMe />
+                                <Row>
+                                    {
+                                        projects.map((project, index) => {
+                                            return (
+                                                <ProjectCard
+                                                    key={index}
+                                                    {...project}
+                                                />
+                                            )
+                                        })
+                                    }
+                                </Row>
                             </Tab.Pane>
                             </Tab.Content>
                         </Tab.Container>
