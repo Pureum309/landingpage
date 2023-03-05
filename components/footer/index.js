@@ -7,7 +7,7 @@ export default function Footer() {
             <Container>
                 <Row className="align-items-center">
                     <Col size={12} sm={6}>
-                        <img src="" alt="Logo" />
+                        <img src="/images/pr.png" alt="Logo" />
                     </Col>
                     <Col size={12} sm={6} className="text-center text-sm-end">
                         <div>
