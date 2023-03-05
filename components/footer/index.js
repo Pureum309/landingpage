@@ -13,7 +13,7 @@ export default function Footer() {
                         <div>
                             <a href="https://pureumsun.com/portfolio/">Portfolio Details <ChevronDoubleRight size={40} /></a>
                         </div>
-                        <p>Copyright 2022. All Rights Reserved</p>
+                        <p>Copyright 2023. All Rights Reserved</p>
                     </Col>
                 </Row>
             </Container>
